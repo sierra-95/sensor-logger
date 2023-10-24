@@ -1,7 +1,7 @@
 import mysql.connector
 
 connection = mysql.connector.connect(
-    host="41.89.227.171 ",
+    host="172.16.119.58 ",
     user="ubuntu",
     password="ubuntu",
     database="sensor_data"
