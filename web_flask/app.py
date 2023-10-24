@@ -3,12 +3,19 @@ import mysql.connector
 
 app = Flask(__name__)
 
-db_connection = mysql.connector.connect(
-    host="41.89.227.171 ",
-    user="ubuntu",
-    password="ubuntu",
-    database="sensor_data"
-)
+db_connection = None
+
+try:
+    db_connection = mysql.connector.connect(
+        host="41.89.227.171",
+        user="ubuntu",
+        password="ubuntu",
+        database="sensor_data"
+    )
+    if db_connection.is_connected():
+        print("Database connection is active.")
+except mysql.connector.Error as e:
+    print(f"Error connecting to the database: {e}")
 
 @app.route('/')
 def home():
@@ -39,8 +46,9 @@ def login():
     return render_template('/var/www/html/login.html')
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=80)
+    app.run(host="0.0.0.0", port=443)
 
 @app.teardown_appcontext
 def close_db_connection(exception):
-    db_connection.close()
+    if db_connection is not None:
+        db_connection.close()
