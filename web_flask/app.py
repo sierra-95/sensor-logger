@@ -57,4 +57,4 @@ def login():
     return render_template('/var/www/html/login.html', data=login_data)
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host='0.0.0.0', port='5000')
