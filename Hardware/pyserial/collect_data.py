@@ -27,7 +27,7 @@ def save_data_to_files(data):
             file.write(f"{timestamp}: {{\"TemperatureC\":{json_data['TemperatureC']},\"TemperatureF\":{json_data['TemperatureF']},\"HeatIndexC\":{json_data['HeatIndexC']},\"HeatIndexF\":{json_data['HeatIndexF']}}}\n")
     if 'UID' in json_data:
         with open('login.txt', 'a') as file:
-            file.write(f"{timestamp}: {{\"UID\":{json_data['UID']},\"Message\":{json_data['Message']}}}\n")
+            file.write(f"{timestamp}: {{\"UID\":\"{json_data['UID']}\",\"Message\":\"{json_data['Message']}\"}}\n")
 while True:
     try:
         # Read data from the serial port
