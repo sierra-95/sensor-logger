@@ -29,9 +29,14 @@ def save_data_to_mysql(data):
     cursor = connection.cursor()
 
     if 'Humidity' in json_data:
-        # Save DHT11 data to the MySQL database
-        cursor.execute("INSERT INTO dht11_data (timestamp, humidity, temperatureC, temperatureF, heatIndexC, heatIndexF) VALUES (%s, %s, %s, %s, %s, %s)",
-                       (timestamp, json_data['Humidity'], json_data['TemperatureC'], json_data['TemperatureF'], json_data['HeatIndexC'], json_data['HeatIndexF']))
+        # Save humidity data to the MySQL database
+        cursor.execute("INSERT INTO humidity_data (timestamp, humidity) VALUES (%s, %s)",
+                       (timestamp, json_data['Humidity']))
+
+    if 'TemperatureC' in json_data and 'TemperatureF' in json_data and 'HeatIndexC' in json_data and 'HeatIndexF' in json_data:
+        # Save temperature data to the MySQL database
+        cursor.execute("INSERT INTO temperature_data (timestamp, temperatureC, temperatureF, heatIndexC, heatIndexF) VALUES (%s, %s, %s, %s, %s)",
+                       (timestamp, json_data['TemperatureC'], json_data['TemperatureF'], json_data['HeatIndexC'], json_data['HeatIndexF']))
 
     if 'UID' in json_data:
         # Save RFID data to the MySQL database

@@ -7,9 +7,9 @@ db_connection = None
 
 try:
     db_connection = mysql.connector.connect(
-        host="41.89.227.171",
+        host="localhost",
         user="ubuntu",
-        password="ubuntu",
+        password="Michael@92!7",
         database="sensor_data"
     )
     if db_connection.is_connected():

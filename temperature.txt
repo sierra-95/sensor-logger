@@ -1,0 +1,4 @@
+2023-10-26 16:21:49: {"TemperatureC":24.1,"TemperatureF":75.38,"HeatIndexC":23.60976,"HeatIndexF":74.498}
+2023-10-26 16:22:19: {"TemperatureC":24.1,"TemperatureF":75.38,"HeatIndexC":23.71421,"HeatIndexF":74.686}
+2023-10-26 16:22:49: {"TemperatureC":24.1,"TemperatureF":75.38,"HeatIndexC":23.40088,"HeatIndexF":74.122}
+
