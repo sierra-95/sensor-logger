@@ -1,0 +1,9 @@
+2023-10-22 20:33:01: {"TemperatureC":23.9,"TemperatureF":75.02,"HeatIndexC":23.2592,"HeatIndexF":73.86699}
+2023-10-22 20:33:31: {"TemperatureC":23.9,"TemperatureF":75.02,"HeatIndexC":23.15476,"HeatIndexF":73.67899}
+2023-10-22 20:34:01: {"TemperatureC":24,"TemperatureF":75.2,"HeatIndexC":23.21254,"HeatIndexF":73.783}
+2023-10-22 20:34:31: {"TemperatureC":24,"TemperatureF":75.2,"HeatIndexC":23.26477,"HeatIndexF":73.877}
+2023-10-22 20:35:01: {"TemperatureC":23.9,"TemperatureF":75.02,"HeatIndexC":23.10254,"HeatIndexF":73.58499}
+2023-10-22 20:35:31: {"TemperatureC":24,"TemperatureF":75.2,"HeatIndexC":23.21254,"HeatIndexF":73.783}
+2023-10-22 20:36:01: {"TemperatureC":24,"TemperatureF":75.2,"HeatIndexC":23.21254,"HeatIndexF":73.783}
+2023-10-22 20:36:31: {"TemperatureC":24,"TemperatureF":75.2,"HeatIndexC":23.26477,"HeatIndexF":73.877}
+2023-10-22 20:37:01: {"TemperatureC":24,"TemperatureF":75.2,"HeatIndexC":23.23866,"HeatIndexF":73.83}
