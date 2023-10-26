@@ -1,9 +1,9 @@
 import mysql.connector
 
 connection = mysql.connector.connect(
-    host="172.16.119.58 ",
+    host="localhost",
     user="ubuntu",
-    password="ubuntu",
+    password="Michael@92!7",
     database="sensor_data"
 )
 if connection.is_connected():
