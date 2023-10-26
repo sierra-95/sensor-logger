@@ -5,7 +5,7 @@ from datetime import datetime
 db_config = {
     "host": "localhost",  # Use the host where your MySQL database is running
     "user": "ubuntu",     # Your MySQL username
-    "password": "ubuntu", # Your MySQL password
+    "password": "Michael@92!7", # Your MySQL password
     "database": "sensor_data"  # Your MySQL database name
 }
 
