@@ -23,3 +23,5 @@
 2023-10-26 23:50:04: {"TemperatureC":23.8,"TemperatureF":74.84,"HeatIndexC":22.96643,"HeatIndexF":73.34}
 2023-10-26 23:50:34: {"TemperatureC":23.8,"TemperatureF":74.84,"HeatIndexC":22.99254,"HeatIndexF":73.38699}
 2023-10-26 23:51:04: {"TemperatureC":23.9,"TemperatureF":75.02,"HeatIndexC":23.20699,"HeatIndexF":73.773}
+2023-10-31 11:36:59: {"TemperatureC":22.5,"TemperatureF":72.5,"HeatIndexC":23.23366,"HeatIndexF":73.821}
+2023-10-31 11:37:29: {"TemperatureC":22.5,"TemperatureF":72.5,"HeatIndexC":23.28587,"HeatIndexF":73.91499}

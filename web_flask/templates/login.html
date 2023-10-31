@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RFID</title>
+	<link rel="stylesheet" href="//wsl.localhost/Ubuntu-20.04/home/sierra-95/sensor-logger/web_flask/static/css/styles.css">
+</head>
+<body>
+	<header>
+    	<h1>Sensor Logger</h1>
+	</header>
+	<nav>
+    	<ul>
+        	<li><a href="//wsl.localhost/Ubuntu-20.04/home/sierra-95/sensor-logger/web_flask/templates/index.html">Home</a></li>
+	        <li><a href="//wsl.localhost/Ubuntu-20.04/home/sierra-95/sensor-logger/web_flask/templates/login.html">RFID</a></li>
+	        <li><a href="#">Settings</a></li>
+    	</ul>
+	</nav>
+	<main>
+    	<section class="login">
+        	<h2>Login</h2>
+	        <form action="//wsl.localhost/Ubuntu-20.04/home/sierra-95/sensor-logger/web_flask/php/login.php" method="post">
+	            <label for="username">Username:</label>
+	            <input type="text" id="username" name="username" required>
+	            <label for="password">Password:</label>
+	            <input type="password" id="password" name="password" required>
+            	<button type="submit">Login</button>
+	        </form>
+	    </section>
+	</main>
+	<footer>
+    	<p>&copy; sierra-95</p>
+	</footer>
+</body>
+</html>
