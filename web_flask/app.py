@@ -44,6 +44,7 @@ def temperature():
     cursor.close()
     return render_template('/var/www/html/temperature.html', data=temperature_data)
 
+
 @app.route('/data_visualization')
 def data_visualization():
     return render_template('/var/www/html/data_visualization.html')
