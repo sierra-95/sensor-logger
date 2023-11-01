@@ -29,22 +29,7 @@
     	<p>&copy; sierra-95</p>
 	</footer>
 
-    <script>
-        // Fetch humidity data from the API and display it
-        fetch('https://web-01.holb20233m8xq2.tech/api/humidity')
-        .then(response => response.json())
-        .then(data => {
-            const humidityDataContainer = document.getElementById('humidity-data-container');
-            humidityDataContainer.innerHTML = ''; // Clear any previous content
-            data.forEach(humidity => {
-                const humidityEntry = document.createElement('p');
-                humidityEntry.textContent = `Humidity: ${humidity.humidity}`;
-                humidityDataContainer.appendChild(humidityEntry);
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching humidity data: ' + error);
-        });
-    </script>
+    <script src="js/main.js"></script>
+
 </body>
 </html>
