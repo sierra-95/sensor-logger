@@ -1,0 +1,30 @@
+{
+  "name": "sensor-logger",
+  "version": "1.0.0",
+  "description": "sensor-logger",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/sierra-95/sensor-logger.git"
+  },
+  "keywords": [
+    "sensor-logger"
+  ],
+  "author": "Michael Machohi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sierra-95/sensor-logger/issues"
+  },
+  "homepage": "https://github.com/sierra-95/sensor-logger#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}
