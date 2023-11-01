@@ -20,11 +20,31 @@
 	<main>
         <section class="rfid-data">
             <h2>Logins Attempted</h2>
-            <p>No Logins attempted for now</p>
+            <div id="rfid-data-container">
+                <!-- RFID login data will be displayed here -->
+            </div>
         </section>
     </main>
 	<footer>
     	<p>&copy; sierra-95</p>
 	</footer>
+
+    <script>
+        // Fetch RFID data from the API and display it
+        fetch('https://web-01.holb20233m8xq2.tech/api/rfid')
+        .then(response => response.json())
+        .then(data => {
+            const rfidDataContainer = document.getElementById('rfid-data-container');
+            rfidDataContainer.innerHTML = ''; // Clear any previous content
+            data.forEach(rfid => {
+                const rfidEntry = document.createElement('p');
+                rfidEntry.textContent = `Date: ${rfid.date}, Time: ${rfid.time}, UID: ${rfid.UID}, Message: ${rfid.message}`;
+                rfidDataContainer.appendChild(rfidEntry);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching RFID data: ' + error);
+        });
+    </script>
 </body>
 </html>

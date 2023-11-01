@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Temprature</title>
+	<title>Temperature</title>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -20,11 +20,31 @@
 	<main>
         <section class="temperature-data">
 			<h2>Temperature Data</h2>
-    		<p>Nothing displayed for now</p>
+            <div id="temperature-data-container">
+                <!-- Temperature data will be displayed here -->
+            </div>
         </section>
     </main>
 	<footer>
     	<p>&copy; sierra-95</p>
 	</footer>
+
+    <script>
+        // Fetch temperature data from the API and display it
+        fetch('https://web-01.holb20233m8xq2.tech/api/temperature')
+        .then(response => response.json())
+        .then(data => {
+            const temperatureDataContainer = document.getElementById('temperature-data-container');
+            temperatureDataContainer.innerHTML = ''; // Clear any previous content
+            data.forEach(temperature => {
+                const temperatureEntry = document.createElement('p');
+                temperatureEntry.textContent = `Date: ${temperature.date}, Time: ${temperature.time}, Temperature (°C): ${temperature.temprature_celcius}, Temperature (°F): ${temperature.temprature_farenheight}, Heat Index (°C): ${temperature.heat_index_celcius}, Heat Index (°F): ${temperature.heat_Index_farenheight}`;
+                temperatureDataContainer.appendChild(temperatureEntry);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching temperature data: ' + error);
+        });
+    </script>
 </body>
 </html>
