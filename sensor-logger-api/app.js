@@ -4,7 +4,12 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://web-01.holb20233m8xq2.tech',
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 // MySQL database configuration
