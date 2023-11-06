@@ -17,6 +17,23 @@ const temperatureAPI = require('./temperatureAPI');
 app.use('/api/humidity', humidityAPI);
 app.use('/api/rfid', rfidAPI);
 app.use('/api/temperature', temperatureAPI);
+// Define routes for web pages
+app.get('/', (req, res) => {
+ 
+  res.sendFile(__dirname + '/var/www/html/index.html');
+});
+
+app.get('/humidity', (req, res) => {
+  res.sendFile(__dirname + '/var/www/html/humidity.html');
+});
+
+app.get('/temperature', (req, res) => {
+  res.sendFile(__dirname + '/var/www/html/temperature.html');
+});
+
+app.get('/rfid', (req, res) => {
+  res.sendFile(__dirname + '/var/www/html/rfid.html');
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
