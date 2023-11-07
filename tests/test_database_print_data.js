@@ -15,7 +15,7 @@ db.connect((err) => {
     console.log('Database connection is active.');
 
     // Query the rfid_data table
-    db.query('SELECT * FROM rfid_data', (error, results) => {
+    db.query('SELECT * FROM humidity_data', (error, results) => {
       if (error) {
         console.error('Error querying the database: ' + error);
       } else {
