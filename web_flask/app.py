@@ -10,6 +10,10 @@ db_config = {
     "password": "Michael@92!7",
     "database": "sensor_logger"
 }
+@app.route('/flask')
+def flask_route():
+    # Your code here
+    return "Hello from Flask"
 @app.route('/')
 def index():
     return render_template('index.html')
