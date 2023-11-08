@@ -19,7 +19,7 @@ db.connect((err) => {
       if (error) {
         console.error('Error querying the database: ' + error);
       } else {
-        console.log('RFID Data:');
+        console.log('Humidity Data:');
         console.table(results);
       }
 
