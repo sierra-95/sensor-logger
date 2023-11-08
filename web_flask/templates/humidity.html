@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Humidity</title>
-	<link rel="stylesheet" href="../static/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humidity</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-	<header>
-    	<h1>Sensor Logger</h1>
-	</header>
-	<nav>
-    	<ul>
-        	<li><a href="{{ url_for('index') }}">Home</a></li>
-	        <li><a href="{{ url_for('login') }}">RFID</a></li>
-	        <li><a href="#">Settings</a></li>
-    	</ul>
-	</nav>
-	<main>
+    <header>
+        <h1>Sensor Logger</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">RFID</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </nav>
+    <main>
         <section class="Humidity-data">
             <h2>Humidity Data</h2>
             <div id="humidity-data-container">
-                {% for humidity_record in humidity_data %}
-            		<p>Date: {{ humidity_record.date }}, Time: {{ humidity_record.time }}, Value: {{ humidity_record.value }}</p>
-        		{% endfor %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for humidity_record in humidity_data %}
+                            <tr>
+                                <td>{{ humidity_record.date }}</td>
+                                <td>{{ humidity_record.time }}</td>
+                                <td>{{ humidity_record.value }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
-	<!--footer>
-    	<p>&copy; sierra-95</p>
-	</footer-->
+    <!--footer>
+        <p>&copy; sierra-95</p>
+    </footer-->
 </body>
 </html>

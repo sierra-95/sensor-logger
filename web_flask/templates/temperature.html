@@ -5,6 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Temperature</title>
 	<link rel="stylesheet" href="../static/css/styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
 	<header>
@@ -21,17 +32,33 @@
         <section class="temperature-data">
 			<h2>Temperature Data</h2>
             <div id="temperature-data-container">
-                {% for temperature_record in temperature_data %}
-                    <p>Date: {{ temperature_record.timestamp }}, Temperature (°C): {{ temperature_record.TemperatureC }}, Temperature (°F): {{ temperature_record.TemperatureF }}, Heat Index (°C): {{ temperature_record.HeatIndexC }}, Heat Index (°F): {{ temperature_record.HeatIndexF }}</p>
-                {% endfor %}
+                <table>
+                    <thead>
+                        <th>Date</th>                       
+                        <th>Temperature (°C)</th>
+                        <th>Temperature (°F)</th>
+                        <th>Heat Index (°C)</th>
+                        <th>Heat Index (°F)</th>
+                    </thead>
+                    <tbody>
+                        {% for temperature_record in temperature_data %}
+                            <tr>
+                                <td>{{ temperature_record.timestamp }}</td>
+                                <td>{{ temperature_record.TemperatureC }}</td>
+                                <td>{{ temperature_record.TemperatureF }}</td>
+                                <td>{{ temperature_record.HeatIndexC }}</td>
+                                <td>{{ temperature_record.HeatIndexF }}</td>
+                                </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
-	<footer>
+	<!--footer>
     	<p>&copy; sierra-95</p>
 	</footer>
-
-    <script src="../static/js/main.js"></script>
+    <script src="../static/js/main.js"></script-->
 
 </body>
 </html>
