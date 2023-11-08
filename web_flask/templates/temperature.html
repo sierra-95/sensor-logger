@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Temperature</title>
+	<link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+	<header>
+    	<h1>Sensor Logger</h1>
+	</header>
+	<nav>
+    	<ul>
+        	<li><a href="{{ url_for('index') }}">Home</a></li>
+	        <li><a href="{{ url_for('login') }}">RFID</a></li>
+	        <li><a href="#">Settings</a></li>
+    	</ul>
+	</nav>
+	<main>
+        <section class="temperature-data">
+			<h2>Temperature Data</h2>
+            <div id="temperature-data-container">
+                {% for temperature_record in temperature_data %}
+                    <p>Date: {{ temperature_record.timestamp }}, Temperature (°C): {{ temperature_record.TemperatureC }}, Temperature (°F): {{ temperature_record.TemperatureF }}, Heat Index (°C): {{ temperature_record.HeatIndexC }}, Heat Index (°F): {{ temperature_record.HeatIndexF }}</p>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+	<footer>
+    	<p>&copy; sierra-95</p>
+	</footer>
+
+    <script src="../static/js/main.js"></script>
+
+</body>
+</html>

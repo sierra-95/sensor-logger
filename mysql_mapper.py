@@ -7,7 +7,7 @@ db_config = {
     "host": "localhost",
     "user": "ubuntu",
     "password": "Michael@92!7",
-    "database": "sensor_data"
+    "database": "sensor_logger"
 }
 
 # Function to insert data into the database

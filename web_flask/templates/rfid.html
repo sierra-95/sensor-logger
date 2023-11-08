@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RFID</title>
+	<link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+	<header>
+    	<h1>Sensor Logger</h1>
+	</header>
+	<nav>
+    	<ul>
+        	<li><a href="{{ url_for('index') }}">Home</a></li>
+	        <li><a href="{{ url_for('login') }}">RFID</a></li>
+	        <li><a href="#">Settings</a></li>
+    	</ul>
+	</nav>
+	<main>
+        <section class="rfid-data">
+            <h2>Logins Attempted</h2>
+            <div id="rfid-data-container">
+                {% for rfid_record in rfid_data %}
+                    <p>Date: {{ rfid_record.timestamp }}, UID: {{ rfid_record.UID }}, Message: {{ rfid_record.Message }}</p>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+	<footer>
+    	<p>&copy; sierra-95</p>
+	</footer>
+
+    <script src="../static/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+	<header>
+    	<h1>Sensor Logger</h1>
+	</header>
+	<nav>
+    	<ul>
+        	<li><a href="{{ url_for('index') }}">Home</a></li>
+	        <li><a href="{{ url_for('login') }}">RFID</a></li>
+	        <li><a href="#">Settings</a></li>
+    	</ul>
+	</nav>
+	<main>
+				
+		<section class="sensor-data">
+			<h2>Sensor Data<img src="../static/css/images/temperature-sensor.png" alt="Sensor Icon"> </h2>
+			<div class="dropdown">
+				<button class="dropbtn">Sensor selection</button>
+				<div class="dropdown-content">
+					<a href="{{ url_for('humidity') }}">Humidity</a>
+					<a href="{{ url_for('temperature') }}">Temperature</a>
+				</div>
+			</div>
+		</section>
+		<section class="visualization">
+	        <h2>Data Visualization<img src="../static/css/images/graph.png" alt="Chart Icon"> </h2>
+			<a href="{{ url_for('data_visualization') }}">view data analysis</a>
+	    </section>
+		
+	</main>
+	<footer>
+    	<p>&copy; sierra-95</p>
+	</footer>
+</body>
+</html>

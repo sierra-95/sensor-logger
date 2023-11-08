@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Humidity</title>
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
 	<header>
@@ -12,8 +12,8 @@
 	</header>
 	<nav>
     	<ul>
-        	<li><a href="index.html">Home</a></li>
-	        <li><a href="login.html">RFID</a></li>
+        	<li><a href="{{ url_for('index') }}">Home</a></li>
+	        <li><a href="{{ url_for('login') }}">RFID</a></li>
 	        <li><a href="#">Settings</a></li>
     	</ul>
 	</nav>
@@ -21,14 +21,14 @@
         <section class="Humidity-data">
             <h2>Humidity Data</h2>
             <div id="humidity-data-container">
+                {% for humidity_record in humidity_data %}
+            		<p>Date: {{ humidity_record.date }}, Time: {{ humidity_record.time }}, Value: {{ humidity_record.value }}</p>
+        		{% endfor %}
             </div>
         </section>
     </main>
-	<footer>
+	<!--footer>
     	<p>&copy; sierra-95</p>
-	</footer>
-
-    <script src="js/main.js"></script>
-
+	</footer-->
 </body>
 </html>
