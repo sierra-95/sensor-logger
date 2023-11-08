@@ -12,7 +12,6 @@ db_config = {
 }
 @app.route('/flask')
 def flask_route():
-    # Your code here
     return "Hello from Flask"
 @app.route('/')
 def index():
@@ -77,19 +76,18 @@ def temperature():
 def login():
     if request.method == 'POST':
         # Handle the form submission here, check username and password
-        # You can use request.form to access form data
         username = request.form['username']
         password = request.form['password']
-        # Add your login logic here
 
-        # If login is successful, you can redirect the user to another page
-        if login_is_successful:
-            return redirect(url_for('index'))
+        # Implement your login logic here (e.g., check if username and password are correct)
+        if username == 'admin' and password == 'admin':
+            return redirect(url_for('rfid'))  # Redirect to the 'rfid' page on successful login
         else:
-            # Handle login failure, perhaps by displaying an error message
             return render_template('login.html', error="Login failed")
 
     return render_template('login.html')
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True, ssl_context=('/etc/letsencrypt/live/web-01.holb20233m8xq2.tech/fullchain.pem', '/etc/letsencrypt/live/web-01.holb20233m8xq2.tech/privkey.pem'))

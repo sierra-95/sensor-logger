@@ -1,30 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Include necessary libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Data_visualization</title>
-	<link rel="stylesheet" href="../static/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data visualization</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
-	<header>
-    	<h1>Sensor Logger</h1>
-	</header>
-	<nav>
-    	<ul>
-        	<li><a href="{{ url_for('index') }}">Home</a></li>
-	        <li><a href="{{ url_for('login') }}">RFID</a></li>
-	        <li><a href="#">Settings</a></li>
-    	</ul>
-	</nav>
-	<main>
+    <header>
+        <h1>Sensor Logger</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">RFID</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </nav>
+    <main>
         <section class="Datavisualization-data">
             <h2>Data visualization</h2>
-            <p>Nothing displayed for now</p>
+            <canvas id="humidity-chart"></canvas> <!-- Create a canvas element for the chart -->
         </section>
     </main>
-	<footer>
-    	<p>&copy; sierra-95</p>
-	</footer>
+    <footer>
+        <p>&copy; sierra-95</p>
+    </footer>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Fetch the humidity data from your Flask route (you can replace the URL)
+			fetch('/humidity')
+				.then(response => response.json())
+				.then(data => {
+					const dates = data.map(record => record.date + ' ' + record.time);
+					const values = data.map(record => record.value);
+					
+					// Create a Chart.js chart
+					const ctx = document.getElementById('humidity-chart').getContext('2d');
+					new Chart(ctx, {
+						type: 'line', // Line chart
+						data: {
+							labels: dates, // X-axis labels
+							datasets: [
+								{
+									label: 'Humidity', // Legend label
+									data: values, // Y-axis data
+									fill: false, // Line fill
+									borderColor: 'blue', // Line color
+								},
+							],
+						},
+						options: {
+							responsive: true,
+							maintainAspectRatio: false,
+							scales: {
+								x: {
+									display: true,
+									title: {
+										display: true,
+										text: 'Date and Time',
+									},
+								},
+								y: {
+									display: true,
+									title: {
+										display: true,
+										text: 'Humidity Value',
+									},
+								},
+							},
+						},
+					});
+				})
+				.catch(error => console.error('Error fetching data:', error));
+		});
+	</script>	
 </body>
 </html>
