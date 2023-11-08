@@ -88,4 +88,4 @@ def login():
     return render_template('login.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True, ssl_context=('/etc/letsencrypt/live/web-01.holb20233m8xq2.tech/fullchain.pem', '/etc/letsencrypt/live/web-01.holb20233m8xq2.tech/privkey.pem'))
+    app.run()
