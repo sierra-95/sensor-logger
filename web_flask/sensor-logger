@@ -20,10 +20,6 @@ server {
         alias ~/sensor-logger/web_flask/static;
     }
 
-    location /media {
-        alias /path/to/your/project/web_flask/media;
-    }
-
     location /css {
         alias ~/sensor-logger/web_flask/static/css;
     }
