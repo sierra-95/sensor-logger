@@ -17,15 +17,15 @@ server {
     }
 
     location /static {
-        alias ~/sensor-logger/web_flask/static;
+        alias /home/ubuntu/sensor-logger/web_flask/static;
     }
 
     location /css {
-        alias ~/sensor-logger/web_flask/static/css;
+        alias /home/ubuntu/sensor-logger/web_flask/static/css;
     }
 
     location /images {
-        alias ~/sensor-logger/web_flask/static/css/images;
+        alias /home/ubuntu/sensor-logger/web_flask/static/css/images;
     }
 
     location ~ /\.ht {
