@@ -1,0 +1,12 @@
+[Unit]
+Description=Gunicorn instance to serve sensor_logger
+After=network.target
+
+[Service]
+User=your_username
+Group=your_group
+WorkingDirectory=/path/to/your/project/web_flask
+ExecStart=/path/to/venv/bin/gunicorn -b 0.0.0.0:8000 -w 4 wsgi:app
+
+[Install]
+WantedBy=multi-user.target

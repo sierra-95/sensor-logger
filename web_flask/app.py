@@ -1,5 +1,5 @@
 import mysql.connector
-from flask import Flask, render_template,request
+from flask import Flask, render_template,request,url_for,redirect
 
 app = Flask(__name__)
 
@@ -14,6 +14,9 @@ db_config = {
 def flask_route():
     return "Hello from Flask"
 @app.route('/')
+def root():
+    return redirect(url_for('login'))
+@app.route('/index')
 def index():
     return render_template('index.html')
 @app.route('/data_visualization')
@@ -75,16 +78,19 @@ def temperature():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        # Handle the form submission here, check username and password
         username = request.form['username']
         password = request.form['password']
-
-        # Implement your login logic here (e.g., check if username and password are correct)
-        if username == 'admin' and password == 'admin':
-            return redirect(url_for('rfid'))  # Redirect to the 'rfid' page on successful login
+        
+        # Check if the provided username and password match
+        if username == 'sierra-95' and password == 'sierra-95@92!7':
+            # Successful login, redirect to index.html
+            return redirect(url_for('index'))
         else:
-            return render_template('login.html', error="Login failed")
+            # Incorrect login, render the login page with an error message
+            error_message = "Incorrect username or password. Please try again."
+            return render_template('login.html', error_message=error_message)
 
+    # Render the login page for GET requests
     return render_template('login.html')
 
 

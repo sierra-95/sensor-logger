@@ -18,7 +18,9 @@ header {
 	background-color:#341515;
 	color:	white;
 	text-align: center;
-	padding: 20px 0;
+	padding: 20px 0; 
+    display: flex; 
+    justify-content: space-between; 
 }	
 	
 nav	{
@@ -66,7 +68,12 @@ footer {
 	padding: 10px 0;
 	position:absolute;
     bottom: 0;
-    width: 100%;
+    width: 98%;	
+    left: 0.2cm;
+    right: 0.2cm;  
+    border-radius: 10px;
+    margin-top: 1cm;
+  
 }
 .dropbtn {
     background-color: #333;
@@ -100,4 +107,5 @@ footer {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 

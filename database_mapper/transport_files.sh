@@ -15,6 +15,6 @@ scp $SSH_OPTIONS $LOGIN_FILE $SERVER_USER@$SERVER_IP:$DESTINATION_DIR
 scp $SSH_OPTIONS $RFID_FILE $SERVER_USER@$SERVER_IP:$DESTINATION_DIR
 
 #crontab -e         open chron editor
-#*/5 * * * * /path/to/your/files/transport_files.sh         upload every 5 minutes
+#*/30 * * * * /path/to/your/files/transport_files.sh         upload every 30 minutes
 
 #scp /path/to/your/files/humidity.txt ubuntu@174.129.54.202:/path/on/server/
