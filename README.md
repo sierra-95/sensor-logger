@@ -3,6 +3,8 @@
 Welcome to the Sensor Logger project!
 This webpage serves as the gateway to our innovative real-time sensor data monitoring and visualization platform.
 
+![Screenshot 2023-11-08 115645](https://github.com/sierra-95/sensor-logger/assets/111045570/b1ed9d29-fa55-4693-b8a8-7f9bc33d60e2)
+
 **Introduction:**
 Our landing page introduces you to the world of Sensor Logger.
 This project was inspired by a personal experience where the need for real-time data collection became apparent.
@@ -17,7 +19,8 @@ We observed the challenges of manual data collection and saw the opportunity to 
 
 
 **Getting Started:**
-To access our full platform, click on https://sierra-95.github.io/ or the "View Sensor Dashboard" button in the header. This will take you to the complete Sensor Logger application where you can explore and interact with sensor data in real time.
+To access our landing page, click on https://sierra-95.github.io/ and get more concise explanations about the sensor logger.
+To access our full platform, click on https://web-01.holb20233m8xq2.tech/. This will take you to the complete Sensor Logger application where you can explore and interact with sensor data in real time.
 
 **Contact Us:**
 Feel free to get in touch through our GitHub profile or via email. We welcome your feedback and inquiries.
