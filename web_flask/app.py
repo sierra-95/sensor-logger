@@ -20,21 +20,14 @@ def root():
     return redirect(url_for('login'))
 @app.route('/index')
 def index():
-    if not session.get('logged_in'):
-        # Redirect to the login page if the user is not logged in
-        return redirect(url_for('login'))
+    
     return render_template('index.html')
 @app.route('/data_visualization')
 def data_visualization():
-    if not session.get('logged_in'):
-        # Redirect to the login page if the user is not logged in
-        return redirect(url_for('login'))
     return render_template('data_visualization.html')
 @app.route('/humidity')
 def humidity():
-    if not session.get('logged_in'):
-        # Redirect to the login page if the user is not logged in
-        return redirect(url_for('login'))
+    
     humidity_data = [
         {"date": "2023-10-26", "time": "16:25:33", "value": 42},
         {"date": "2023-10-26", "time": "16:26:03", "value": 45},
@@ -54,9 +47,6 @@ def humidity():
 
 @app.route('/rfid')
 def rfid():
-    if not session.get('logged_in'):
-        # Redirect to the login page if the user is not logged in
-        return redirect(url_for('login'))
     rfid_data = [
     {"timestamp": "2023-10-26 16:21:42", "UID": "C1 29 15 31", "Message": "Access granted"},
     {"timestamp": "2023-10-26 16:25:33", "UID": "C1 29 15 31", "Message": "Access granted"},
@@ -72,9 +62,6 @@ def rfid():
 
 @app.route('/temperature')
 def temperature():
-    if not session.get('logged_in'):
-        # Redirect to the login page if the user is not logged in
-        return redirect(url_for('login'))
     temperature_data = [
     {"timestamp": "2023-10-26 16:21:49", "TemperatureC": 24.1, "TemperatureF": 75.38, "HeatIndexC": 23.60976, "HeatIndexF": 74.498},
     {"timestamp": "2023-10-26 16:22:19", "TemperatureC": 24.1, "TemperatureF": 75.38, "HeatIndexC": 23.71421, "HeatIndexF": 74.686},

@@ -1,9 +1,0 @@
-On your Ubuntu 20.04, open chron editor and run   "crontab -e "
-This gives you an editor interface. You can choose vim , emacs or nano editor as your preference
-
-The following assumes that the directory is cloned on your root directory.
-Type the following: 
-
-
-*/30 * * * * /sensor-logger/database_mapper/transport_files.sh         #uploads every 30 minutes
-*/30 * * * * /sensor-logger/mapper.sh
