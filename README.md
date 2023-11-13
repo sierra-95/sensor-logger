@@ -27,11 +27,12 @@ We observed the challenges of manual data collection and saw the opportunity to 
 
 ## Getting Started:
 To access our landing page, click on https://sierra-95.github.io/ and get more concise explanations about the sensor logger.
-To access our full platform, click on https://web-01.holb20233m8xq2.tech/. This will take you to the complete Sensor Logger application where you can explore and interact with sensor data in real time.
+To view a sample sensor logger dashboard, click on https://web-01.holb20233m8xq2.tech/. This will take you to the complete Sensor Logger application where you can explore and interact with sensor data in real time.
 ## Environment
-This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
+This project is interpreted/tested on Ubuntu 20.04 LTS using python3 (version 3.4.3)
 
 ## Installation
+* This project assumes you are collecting data on a local machine and uploading the data on a remote server to display it on a website.
 * Clone this repository: `git clone "https://github.com/sierra-95/sensor-logger.git"`
 * Access Sensor-logger: `cd sensor-logger`
 * Confirm you have the following installed on your machine : 
