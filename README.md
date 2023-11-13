@@ -8,7 +8,6 @@ This webpage serves as the gateway to our innovative real-time sensor data monit
 * [Introduction](#introduction)
 * [Environment](#environment)
 * [Installation](#installation)
-* [Usage](#usage)
 * [Bugs](#bugs)
 * [Authors](#authors)
 * [License](#license)
@@ -35,11 +34,29 @@ This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.
 ## Installation
 * Clone this repository: `git clone "https://github.com/sierra-95/sensor-logger.git"`
 * Access Sensor-logger: `cd sensor-logger`
-* Run hbnb(interactively): `./console` and enter command
-* Run hbnb(non-interactively): `echo "<command>" | ./console.py`
+* Confirm you have the following installed on your machine : 
+    1. gunicorn         pip install gunicorn
+    2. flask            pip install flask
+    3. Arduino IDE      https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE
+    4. mysql.connector  pip install mysql-connector-python
+    5. MySQL server     apt-get mysql-server
+* Review the following files and edit database and server details.
+    1. /sensor-logger/mysql_mapper.py
+    2. /sensor-logger/Database/transport_files.sh
+    3. /sensor-logger/web_flask/app.py
+    **Locally**
+* Navigate to /sensor-logger/setup and use sql files to setup your database.
+* Open Arduin0 IDE, navigate to /sensor-logger/Hardware/Full_code/ and upload the code to the sensor setup
+* Navigate to /sensor-logger/Hardware/PySerial and run collect_data.py
+* Follow the setup file at  /sensor-logger/setup/setup-cron-scheduler to setup cron for file upload
+* If cron setup fails, use /sensor-logger/Database/transport_files.sh to move files manually.
 
-**Contact Us:**
-Feel free to get in touch through our GitHub profile or via email. We welcome your feedback and inquiries.
+    **server**
+* Clone this repository: `git clone "https://github.com/sierra-95/sensor-logger.git"`
+* Follow the setup file on /sensor-logger/setup/setup-flask-server to setup flask
+* Configure your server to act as reverse proxy. Reference using : /sensor-logger/web_flask/sensor_logger
+* If any need to setup systemctl with flask, use /sensor-logger/web_flask/sensor_logger.service
+
 
 **Conclusion:**
 Sensor Logger is not just a project; it's a solution to a real-world problem. We're excited to share this innovative platform with you and invite you to join us on this data-driven discovery journey. Together, we're pushing the boundaries of data security, user-friendly access, and endless possibilities.

@@ -1,7 +1,7 @@
 Assumptions:
 
 The following assumes that the directory is cloned on your root directory.
-The following are neccesary if your hosting a website on a rempte server
+The following are neccesary if your hosting a website on a remote server
 
 On your Ubuntu 20.04, open chron editor and run   "crontab -e "
 This gives you an editor interface. You can choose vim , emacs or nano editor as your preference
