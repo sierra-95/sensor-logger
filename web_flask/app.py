@@ -87,8 +87,7 @@ def login():
 
         # Check if the provided username and password match
         if username == 'sierra-95' and password == 'sierra-95@92!7':
-            # Successful login, store the authentication status in the session
-            session['logged_in'] = True
+            # Successful login, redirect to index.html
             return redirect(url_for('index'))
         else:
             # Incorrect login, render the login page with an error message
@@ -97,10 +96,7 @@ def login():
 
     # Render the login page for GET requests
     return render_template('login.html')
-@app.route('/logout')
-def logout():
-    session.pop('logged_in', None)
-    return redirect(url_for('login'))
+
 
 
 
