@@ -1,0 +1,18 @@
+Assumptions:
+
+The following assumes that the directory is cloned on your root directory.
+The following are neccesary if your hosting a website on a rempte server
+
+On your Ubuntu 20.04, open chron editor and run   "crontab -e "
+This gives you an editor interface. You can choose vim , emacs or nano editor as your preference
+
+Type the following in the editor and exit afterwads (WQ): 
+
+This should be written on your local machine cron tab
+*/30 * * * * /sensor-logger/database_mapper/transport_files.sh         #uploads every 30 minutes
+
+This should be written on your remote server cron tab
+*/30 * * * * /sensor-logger/mapper.sh
+
+confirm contents of cron-tab by running "crontab -l"
+If everything checks out, run "sudo service cron restart"

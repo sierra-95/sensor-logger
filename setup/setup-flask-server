@@ -1,0 +1,5 @@
+Navigate to /sensor-logger/web_flask/
+If gunicorn isn;t installed: "pip install --upgrade gunicorn"
+
+Run "nohup gunicorn -b 0.0.0.0:8000 -w 4 wsgi:app &" 
+This runs the app.py on the backgorund  to serve the web pages.

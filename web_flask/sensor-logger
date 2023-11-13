@@ -1,0 +1,39 @@
+server {
+    listen 80;
+    server_name web-01.holb20233m8xq2.tech;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name web-01.holb20233m8xq2.tech;
+
+    root /var/www/html;  # This should point to the directory where your HTML files are stored.
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    location /static {
+        alias /home/ubuntu/sensor-logger/web_flask/static;
+    }
+
+    location /css {
+        alias /home/ubuntu/sensor-logger/web_flask/static/css;
+    }
+
+    location /images {
+        alias /home/ubuntu/sensor-logger/web_flask/static/css/images;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+    ssl_certificate /etc/letsencrypt/live/web-01.holb20233m8xq2.tech/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/web-01.holb20233m8xq2.tech/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+}

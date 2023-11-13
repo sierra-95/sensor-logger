@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RFID</title>
+	<link rel="stylesheet" href="../static/css/styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+	<header>
+    	<h1>Sensor Logger</h1>
+	</header>
+	<nav>
+    	<ul>
+        	<li><a href="{{ url_for('index') }}">Home</a></li>
+	        <li><a href="{{ url_for('rfid') }}">RFID</a></li>
+	        <li><a href="#">Settings</a></li>
+    	</ul>
+	</nav>
+	<main>
+        <section class="rfid-data">
+            <h2>Logins Attempted</h2>
+            <div id="rfid-data-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>                            
+                            <th>UID</th>                           
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for rfid_record in rfid_data %}
+                            <tr>
+                                <td>{{ rfid_record.timestamp }}</td>                                                               
+                                <td>{{ rfid_record.UID }}</td>                                 
+                                <td>{{ rfid_record.Message }}</td>
+                            </tr>
+                    {% endfor %}
+                    </tbody>                   
+                </table>
+            </div>
+        </section>
+    </main>
+	<footer>
+    	<p>&copy; sierra-95</p>
+	<!--footer>
+
+    <script src="../static/js/main.js"></script-->
+
+</body>
+</html>

@@ -7,15 +7,13 @@ db_config = {
     "host": "localhost",
     "user": "ubuntu",
     "password": "Michael@92!7",
-    "database": "sensor_data"
+    "database": "sensor_logger"
 }
-
 # Function to insert data into the database
 def insert_data_to_mysql(filename, table_name):
     try:
         db_connection = mysql.connector.connect(**db_config)
         cursor = db_connection.cursor()
-
         with open(filename, "r") as file:
             for line in file:
                 data = line.strip()
