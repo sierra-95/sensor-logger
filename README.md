@@ -1,4 +1,4 @@
-**The Sensor Logger**
+## The Sensor Logger
 
 Welcome to the Sensor Logger project!
 This webpage serves as the gateway to our innovative real-time sensor data monitoring and visualization platform.
@@ -13,12 +13,12 @@ This webpage serves as the gateway to our innovative real-time sensor data monit
 * [Authors](#authors)
 * [License](#license)
 
-**Introduction:**
+## Introduction:
 Our landing page introduces you to the world of Sensor Logger.
 This project was inspired by a personal experience where the need for real-time data collection became apparent.
 We observed the challenges of manual data collection and saw the opportunity to create a solution that would make data collection effortless and efficient.
 
-**Key Features:**
+## Key Features
 
 1. Real-time Sensor Data: Sensor Logger allows you to access sensor data in real-time, empowering you with immediate insights into your connected devices.
 2. Easy Navigation: The landing page provides a user-friendly interface with easy navigation elements. You can explore different sections, including an "About" section to learn more about the project's background.
@@ -26,7 +26,7 @@ We observed the challenges of manual data collection and saw the opportunity to 
 4. Project Story: We've added a personal touch to the project with a story that inspired it. This isn't just another project; it's a journey that began with a real-world problem and evolved into a high-tech solution.
 
 
-**Getting Started:**
+## Getting Started:
 To access our landing page, click on https://sierra-95.github.io/ and get more concise explanations about the sensor logger.
 To access our full platform, click on https://web-01.holb20233m8xq2.tech/. This will take you to the complete Sensor Logger application where you can explore and interact with sensor data in real time.
 ## Environment
