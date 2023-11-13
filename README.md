@@ -4,6 +4,14 @@ Welcome to the Sensor Logger project!
 This webpage serves as the gateway to our innovative real-time sensor data monitoring and visualization platform.
 
 ![Screenshot 2023-11-08 115645](https://github.com/sierra-95/sensor-logger/assets/111045570/b1ed9d29-fa55-4693-b8a8-7f9bc33d60e2)
+## Table of Content
+* [Introduction](#introduction)
+* [Environment](#environment)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Bugs](#bugs)
+* [Authors](#authors)
+* [License](#license)
 
 **Introduction:**
 Our landing page introduces you to the world of Sensor Logger.
@@ -21,9 +29,24 @@ We observed the challenges of manual data collection and saw the opportunity to 
 **Getting Started:**
 To access our landing page, click on https://sierra-95.github.io/ and get more concise explanations about the sensor logger.
 To access our full platform, click on https://web-01.holb20233m8xq2.tech/. This will take you to the complete Sensor Logger application where you can explore and interact with sensor data in real time.
+## Environment
+This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
+
+## Installation
+* Clone this repository: `git clone "https://github.com/sierra-95/sensor-logger.git"`
+* Access AirBnb directory: `cd sensor-logger`
+* Run hbnb(interactively): `./console` and enter command
+* Run hbnb(non-interactively): `echo "<command>" | ./console.py`
 
 **Contact Us:**
 Feel free to get in touch through our GitHub profile or via email. We welcome your feedback and inquiries.
 
 **Conclusion:**
 Sensor Logger is not just a project; it's a solution to a real-world problem. We're excited to share this innovative platform with you and invite you to join us on this data-driven discovery journey. Together, we're pushing the boundaries of data security, user-friendly access, and endless possibilities.
+## Bugs
+No known bugs at this time. 
+
+## Authors
+Michael Machohi -[GitHub](https://github.com/sierra-95) 
+## License
+Public Domain. No copy write protection. 
