@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 **The Sensor Logger**
-=======
-## The Sensor Logger
->>>>>>> 91a2726390432595df08e3596bf82a3edeee1614
-
 Welcome to the Sensor Logger project!
 This webpage serves as the gateway to our innovative real-time sensor data monitoring and visualization platform.
 ![Screenshot 2023-11-08 115645](https://github.com/sierra-95/sensor-logger/assets/111045570/b1ed9d29-fa55-4693-b8a8-7f9bc33d60e2)
@@ -51,6 +46,7 @@ This project is interpreted/tested on Ubuntu 20.04 LTS using python3 (version 3.
     1. /sensor-logger/mysql_mapper.py
     2. /sensor-logger/Database/transport_files.sh
     3. /sensor-logger/web_flask/app.py
+       
     **Locally**
 * Navigate to /sensor-logger/setup and use sql files to setup your database.
 * Open Arduin0 IDE, navigate to /sensor-logger/Hardware/Full_code/ and upload the code to the sensor setup
