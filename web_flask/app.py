@@ -9,7 +9,7 @@ app = Flask(__name__)
 db_config = {
     "host": "localhost",
     "user": "ubuntu",
-    "password": "Michael@92!7",
+    "password": "########",
     "database": "sensor_logger"
 }
 @app.route('/flask')
